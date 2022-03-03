@@ -1,0 +1,85 @@
+body{
+    font-size: 18px;
+    margin: 0;
+}
+/* fonts */
+h1, h2, h3, h4, button, a{
+    font-family: "Fraunces", serif;
+}
+.navItem, p{
+    font-family: "Barlow";
+    font-weight: 600;
+}
+p{
+    color: hsl(232, 10%, 55%)
+}
+/* basic font size */
+nav{
+    font-size: 18px;
+}
+/* navigation section */
+nav{
+    margin: 0;
+    padding: 40px 0px 0 0px;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    color: hsl(0, 0%, 100%);
+    
+}
+.logo, button{
+    height: 50px;
+    width: auto;
+}
+button{
+    padding: 0 20px;
+    border-radius: 25px;
+    border: 0;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(198, 62%, 26%);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.navItemContainer{
+    width: 100vw;
+    display: flex;
+    flex-basis: 700px;
+    flex-direction: row-reverse;
+}
+.navItem{
+    padding: 0 30px;
+    text-align: right;
+    
+}
+
+/* hovers */
+.navItem:hover, a:hover{
+    cursor: pointer;
+}
+button:hover{
+    cursor: pointer;
+}
+/* hero section */
+.hero{
+    height: 100vh;
+    margin-top:-40vh;
+    background-image: url("images/desktop/image-header.jpg");
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-position-y: center;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    z-index: 0;
+    
+}
+/* tiles */
+
+/* attribution section */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
