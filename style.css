@@ -136,6 +136,18 @@ h1{
     margin-top: 0;
 }
 
+/* image container */
+.imageContainer{
+    width: 100vw;
+    display: flex;
+    flex-direction:row;
+}
+.imageSlide{
+    width: 25vw;
+}
+.milk{
+    background-image: url(images/desktop/image-gallery-milkbottles.jpg)
+}
 /* attribution section */
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
