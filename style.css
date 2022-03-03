@@ -10,7 +10,7 @@ h1, h2, h3, h4, button, a{
     font-family: "Barlow";
     font-weight: 600;
 }
-p{
+p, .testimonialContainer h3{
     color: hsl(232, 10%, 55%)
 }
 /* basic font size */
@@ -51,7 +51,7 @@ button{
 .navItem{
     padding: 0 30px;
     text-align: right;
-    
+    color: hsl(0, 0%, 100%);
 }
 
 /* hovers */
@@ -79,6 +79,62 @@ h1{
     
 }
 /* tiles */
+.tileContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tile{
+    flex-basis: 50vw;
+    height: auto;
+    
+}
+.image{
+    background-repeat: no-repeat;
+    height: 300px;
+}
+.tile-text{
+    padding: 30px 50px;
+}
+.tile2{
+    background-image: url("images/desktop/image-transform.jpg");
+}
+.tile3{
+    background-image: url("images/desktop/image-gallery-milkbottles.jpg");
+}
+
+/* testimonial */
+.testimonialContainer{
+    text-align: center;
+}
+.testimonialContainer h3{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.testimonialContents, .testimonial{
+    display: flex;
+}
+.testimonialContents{
+    flex-direction: row;
+    justify-content: space-around;
+}
+.testimonial{
+    padding: 20px;
+    flex-direction: column;
+    width: 25vw;
+    /* border: 1px solid black; */
+    align-items: center;
+}
+.testimonial img{
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+.testimonial h4 {
+    margin-bottom: 5px;
+}
+.job{
+    margin-top: 0;
+}
 
 /* attribution section */
 .attribution { font-size: 11px; text-align: center; }
