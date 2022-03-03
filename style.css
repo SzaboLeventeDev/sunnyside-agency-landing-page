@@ -6,7 +6,7 @@ body{
 h1, h2, h3, h4, button, a{
     font-family: "Fraunces", serif;
 }
-.navItem, p{
+.navItem, p, .footerItem{
     font-family: "Barlow";
     font-weight: 600;
 }
@@ -82,24 +82,37 @@ h1{
 .tileContainer{
     display: flex;
     flex-wrap: wrap;
+    margin-top: -16.5px;
 }
 .tile{
-    flex-basis: 50vw;
-    height: auto;
-    
+    width: 50%;
+    height: 700px;
+    /* border: 1px solid red; */
 }
 .image{
     background-repeat: no-repeat;
-    height: 300px;
+    background-size: cover;
 }
 .tile-text{
-    padding: 30px 50px;
+    padding: 25vh 10vw;
+}
+.tile-text-img{
+    padding: 40vh 15vw 0 15vw;
+    text-align: center;
 }
 .tile2{
     background-image: url("images/desktop/image-transform.jpg");
 }
 .tile3{
-    background-image: url("images/desktop/image-gallery-milkbottles.jpg");
+    background-image: url("images/desktop/image-stand-out.jpg");
+}
+.tile5{
+    color:hsl(167, 40%, 24%);
+    background-image: url("images/desktop/image-graphic-design.jpg");
+}
+.tile6{
+    color: hsl(198, 62%, 26%);
+    background-image: url("images/desktop/image-photography.jpg");
 }
 
 /* testimonial */
@@ -145,8 +158,30 @@ h1{
 .imageSlide{
     width: 25vw;
 }
-.milk{
-    background-image: url(images/desktop/image-gallery-milkbottles.jpg)
+/* footer */
+footer{
+    margin-top: -5px;
+    padding: 30px 0;
+    background-color: hsl(168, 34%, 41%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.siteMap, .social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.siteMap{
+    margin-bottom: 50px;
+}
+.footerItem, .socialIcon{
+    text-align: center;
+    color: hsl(168, 34%, 41%);
+    padding: 0 30px;
+}
+.social{
+
 }
 /* attribution section */
 .attribution { font-size: 11px; text-align: center; }
