@@ -55,11 +55,20 @@ button{
 }
 
 /* hovers */
-.navItem:hover, a:hover{
+.navItem:hover, a:hover, .underline:hover{
     cursor: pointer;
 }
 button:hover{
     cursor: pointer;
+}
+.underline:hover{
+    opacity: 1;
+}
+a:hover{
+    /* underline opacity: 1 */
+}
+.socialIcon:hover{
+    background-color:hsl(0, 0%, 100%);
 }
 /* hero section */
 .hero{
@@ -89,6 +98,7 @@ h1{
     height: 700px;
     /* border: 1px solid red; */
 }
+
 .image{
     background-repeat: no-repeat;
     background-size: cover;
@@ -99,6 +109,36 @@ h1{
 .tile-text-img{
     padding: 40vh 15vw 0 15vw;
     text-align: center;
+}
+/* hyperlinks */
+a{
+    text-decoration: none;
+}
+
+}
+a::after{
+    /* font-color: same */
+}
+.learn1, .learn2{
+    border-radius: 5px;
+    text-decoration: none;
+}
+.underline{
+    width: 120px;
+    opacity: 0.7;
+    position: relative;
+    left: -9px;
+    top: -8px;
+    /* Need the position of the line and the hover*/
+}
+.learn1{
+    border-bottom: 10px solid hsl(51, 100%, 49%);    
+}
+.learn2{
+    border-bottom: 10px solid hsl(7, 99%, 70%);
+}
+.tile1 h2, .tile4 h2{
+    color: hsl(212, 27%, 19%);
 }
 .tile2{
     background-image: url("images/desktop/image-transform.jpg");
@@ -117,6 +157,7 @@ h1{
 
 /* testimonial */
 .testimonialContainer{
+    padding: 80px 0;
     text-align: center;
 }
 .testimonialContainer h3{
@@ -180,8 +221,12 @@ footer{
     color: hsl(168, 34%, 41%);
     padding: 0 30px;
 }
-.social{
-
+/* responsive design */
+@media (max-width: 375px){
+    .tileContainer{
+        /* flex-wrap: nowrap; */
+        flex-direction: column;
+    }
 }
 /* attribution section */
 .attribution { font-size: 11px; text-align: center; }
