@@ -11,7 +11,7 @@ h1, h2, h3, h4, button, a{
     font-weight: 600;
 }
 p, .testimonialContainer h3{
-    color: hsl(232, 10%, 55%)
+    color: hsl(232, 10%, 55%);
 }
 /* basic font size */
 nav{
@@ -28,7 +28,7 @@ nav{
     color: hsl(0, 0%, 100%);
     
 }
-.logo, button{
+.logo, button, .menu{
     height: 50px;
     width: auto;
 }
@@ -41,12 +41,17 @@ button{
     text-transform: uppercase;
     font-weight: 700;
 }
-
+.menu{
+    visibility: hidden;
+}
 .navItemContainer{
     width: 100vw;
+    height: 50px;
     display: flex;
     flex-basis: 700px;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    /* align-items: baseline; */
+    align-items: flex-end;
 }
 .navItem{
     padding: 0 30px;
@@ -64,10 +69,8 @@ button:hover{
 .underline:hover{
     opacity: 1;
 }
-a:hover{
-    /* underline opacity: 1 */
-}
-.socialIcon:hover{
+
+.social a:hover{
     background-color:hsl(0, 0%, 100%);
 }
 /* hero section */
@@ -91,7 +94,7 @@ h1{
 .tileContainer{
     display: flex;
     flex-wrap: wrap;
-    margin-top: -16.5px;
+    /* margin-top: -16.5px; */
 }
 .tile{
     width: 50%;
@@ -115,10 +118,6 @@ a{
     text-decoration: none;
 }
 
-}
-a::after{
-    /* font-color: same */
-}
 .learn1, .learn2{
     border-radius: 5px;
     text-decoration: none;
@@ -147,12 +146,17 @@ a::after{
     background-image: url("images/desktop/image-stand-out.jpg");
 }
 .tile5{
-    color:hsl(167, 40%, 24%);
     background-image: url("images/desktop/image-graphic-design.jpg");
 }
+.tile5 p, .tile5 h2{
+    color:hsl(167, 40%, 24%);
+}
 .tile6{
-    color: hsl(198, 62%, 26%);
+    
     background-image: url("images/desktop/image-photography.jpg");
+}
+.tile6 p , .tile6 h2{
+    color: hsl(198, 62%, 26%);
 }
 
 /* testimonial */
@@ -199,6 +203,20 @@ a::after{
 .imageSlide{
     width: 25vw;
 }
+/* social */
+.social ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+}
+li{
+    margin-right: 20px;
+}
+li:hover{
+    background-color: white;
+    cursor: pointer;
+}
 /* footer */
 footer{
     margin-top: -5px;
@@ -208,7 +226,7 @@ footer{
     flex-direction: column;
     justify-content: center;
 }
-.siteMap, .social{
+.siteMap{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -219,15 +237,129 @@ footer{
 .footerItem, .socialIcon{
     text-align: center;
     color: hsl(168, 34%, 41%);
-    padding: 0 30px;
+    margin: 0 30px;
 }
+
 /* responsive design */
-@media (max-width: 375px){
+@media screen and (max-width: 375px){
+    body{
+        width: 100vw;
+    }
+    nav{
+        padding-top: 0;
+        /* padding: 3vh 3vw; */
+        justify-content: baseline;
+    }
+    .logo, .menu{
+        height: 4vh;
+        width: auto;
+        margin: auto;
+    }
+    .menu{
+        visibility: visible;
+        
+    }
+    .hero{
+        background-image: url("images/mobile/image-header.jpg");
+        margin-top: -168px;
+    }
+    
+    .navItemContainer{
+        visibility: visible;
+        flex-direction: column;
+        position: absolute;
+        top: 15vh;
+        flex-basis: 200px; /* not sure if it's needed */
+        width: 85vw;
+        height: 250px;
+        background-color: hsl(0, 0%, 100%);;
+        align-items: center;
+        z-index: 1;
+
+        /* width has to be bigger and the right upper part is unfinished */
+    }
+    .navItem{
+        color: hsl(232, 10%, 55%);
+        
+    }
+    button{
+        visibility: visible;
+        background-color: hsl(51, 100%, 49%);
+    }
+    /* tiles */
     .tileContainer{
-        /* flex-wrap: nowrap; */
+        flex-wrap: nowrap;
+        flex-direction: column;
+        
+    }
+    .tile{
+        width: 100vw;
+        height: 50vh;
+        justify-content: center;
+    }
+    .tile-text{
+        padding: 2vh 3vw;
+        text-align: center;
+    }.underline{
+        margin: auto;
+        position: static
+    }
+    .tile2{
+        background-image: url("images/mobile/image-transform.jpg");
+        
+    }
+    .tile3{
+        background-image: url("images/mobile/image-stand-out.jpg");
+    }
+    .tile5{
+        background-image: url("images/mobile/image-graphic-design.jpg");
+        height: auto;
+    }
+    .tile6{
+        background-image: url("images/mobile/image-photography.jpg");
+        height: auto;
+    }
+    /* testimonials */
+    
+    .testimonialContents{
         flex-direction: column;
     }
+    .testimonial{
+        width: 100vw;
+    }
+
+    /* images */
+    .imageContainer{
+        flex-wrap: wrap;
+        
+    }
+    
+    .imageSlide{
+        width: 50vw;
+        height: auto;
+
+    }
+    .lowerBox{
+        margin-top: -5px;
+    }
+    /* footer */
+    footer{
+        background-color: hsl(168, 34%, 70%);
+    }
+    .footerLogo{
+        width: 50vw;
+        height: auto;
+        margin: auto;
+        /* background-color: hsl(213, 9%, 39%);  */
+    }
+    .social, .siteMap{
+        margin: 20px auto;
+    }
+    .footerItem, .socialIcon{
+        margin: 0 10px;
+    }
 }
+
 /* attribution section */
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
